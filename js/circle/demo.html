@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>焦点轮播图</title>
+    <style>
+        #container{
+            width: 600px;
+            height: 400px;
+            border: 1px solid black;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+        }
+        #list {
+            width: 4200px;
+            height: 400px;
+            position: absolute;
+            left: 1px;
+        }
+        #list img{
+            float: left;
+        }
+        #buttons {
+            position: absolute;
+            height: 10px;
+            width: 100px;
+            bottom: 20px;
+            left: 250px;
+        }
+        #button span{
+            cursor: pointer;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: #333;
+            margin-right: 5px;
+            float: left;
+            border: 1px solid #fff;
+        }
+        #button .on{
+            background: orangered;
+        }
+        #button a{
+            text-decoration: none;
+        }
+        #buttons ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .arrow{
+            cursor: pointer;
+            display: none;
+            text-align: center;
+            font-size: 36px;
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 150px;
+            background-color: RGBA(0,0,0,0.3);
+            color: #fff;
+        }
+        .arrow:hover {
+            background-color: RGBA(0,0,0,0.7);
+        }
+        #container:hover .arrow,#container:hover .typeBtn{
+            display: block;
+        }
+        
+        #prev{
+            left: 20px;
+            
+        }
+        
+        #next{
+            right: 20px;
+        }
+        #type{
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        #type:hover .typeBtn{
+        
+            
+        }
+        .typeBtn{
+            display: none;
+            color: #ccc;
+            font: 14px 'Microsoft YaHei',雅黑;
+            line-height: 30px;
+            text-align: center;
+            cursor:pointer;
+            width: 80px;
+            height: 30px;
+            background-color: RGBA(0,0,0,0.3);
+        }
+        .typeBtn:hover{
+            background-color: RGBA(0,0,0,0.8);
+        }
+        #type .on {
+            background-color: RGBA(0,0,0,1.0);
+        }
+    </style>
+    <script>
+        window.onload = function (){
+            //将所有的全局变量放入circle变量中,防止污染全局变量
+            //具体的参数也可以在这里设置
+            var circle = {
+                index: 1,
+                //time和interval用来调整画面帧数
+                time: 300,//位移总时长
+                interval: 5,//位移间隔时间,
+                timer:null,
+                circled: true,
+                auto: true,
+                animating: false,
+                container: document.getElementById('container'),
+                list: document.getElementById('list'),
+                prev: document.getElementById('prev'),
+                next: document.getElementById('next'),
+                buttons: document.getElementById('buttons').getElementsByTagName('span'),
+                circleBtn: document.getElementById('circle'),
+                autoBtn: document.getElementById('auto')
+                
+            };
+            function animate(offset){
+                circle.animating = true;
+                var newLeft = parseInt(circle.list.style.left) + offset;
+                var speed = offset/(circle.time/circle.interval);
+                
+                function go(){
+                    //递归滑动，直到滑到下一张图片
+                    if(circle.circled){
+                        if((speed < 0 && parseInt(circle.list.style.left) > newLeft) || (speed > 0 &&
+                                parseInt(circle.list.style.left) < newLeft)){
+                            circle.list.style.left = parseInt(circle.list.style.left) + speed +'px';
+                            setTimeout(go,circle.interval);
+                        }else{
+                            circle.list.style.left = newLeft + 'px';
+                            if(newLeft > -600){
+                                circle.list.style.left = -3000 + 'px';
+                            }
+                            if(newLeft < -3000){
+                                circle.list.style.left = -600 + 'px';
+                            }
+                            circle.animating = false;
+                        }
+                    }else{
+                        circle.list.style.left = newLeft + 'px';
+                        if(newLeft > -600){
+                            circle.list.style.left = -3000 + 'px';
+                        }
+                        if(newLeft < -3000){
+                            circle.list.style.left = -600 + 'px';
+                        }
+                        circle.animating = false;
+                    }
+                    
+                }
+                go();
+                
+                
+            }
+            
+            function showButton(){
+                //先清空
+                for(var i=0;i<circle.buttons.length;i++){
+                    if(circle.buttons[i].className == 'on'){
+                        circle.buttons[i].className = '';
+                        break;
+                    }
+                    
+                }
+                //再点亮
+                circle.buttons[circle.index -1].className = 'on';
+            }
+            circle.next.onclick = function (){
+                if(circle.animating){
+                    return;
+                }
+                if(circle.index == 5){
+                    circle.index = 1;
+                }else{
+                    circle.index += 1;
+                }
+                showButton();
+                if(!circle.animating){
+                    animate(-600);
+                }
+            }
+            circle.prev.onclick = function(){
+                if(circle.animating){
+                    return;
+                }
+                if(circle.index == 1){
+                    circle.index = 5;
+                }else{
+                    circle.index -= 1;
+                }
+                showButton();
+                
+                animate(600);
+                
+                
+            }
+            //圆点切换
+            for(var i=0;i<circle.buttons.length;i++){
+                circle.buttons[i].onclick = function(){
+                    var myIndex  = this.getAttribute('index');
+                    
+                    //优化:点击的为目前的点，则不切换;
+                    if(myIndex == circle.index){
+                        return;
+                    }
+                    var offset = (myIndex - circle.index)*-600;
+                    animate(offset);
+                    circle.index = parseInt(myIndex);//这里转换为数字型，数字不能用string类型的下标
+                    showButton();
+                }
+            }
+            
+            //自动播放
+            function play(){
+                circle.timer = setInterval(function(){
+                    circle.next.onclick();
+                },2000)
+            }
+            
+            function stop(){
+                clearInterval(circle.timer);
+            }
+            
+            circle.container.onmouseover = stop;
+            circle.container.onmouseout = function(){
+                if(circle.auto){
+                    play();
+                }
+            };
+            
+            play();
+            
+            circle.autoBtn.onclick = function(){
+                circle.auto = !circle.auto;
+                circle.autoBtn.classList.toggle("on");
+                stop();
+            }
+            circle.circleBtn.onclick = function(){
+                circle.circled = !circle.circled;
+                circle.circleBtn.classList.toggle("on");
+            }
+            
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <div id="list" style="left:-600px">
+        <img src="img/circle/5.jpg" alt="5" ><!--多放一张图片是为了设置list有初始的left属性，另外第一张向前滑时不会显示空白-->
+        <img src="img/circle/1.jpg" alt="1" title="1">
+        <img src="img/circle/2.jpg" alt="2" title="2">
+        <img src="img/circle/3.jpg" alt="3" title="3">
+        <img src="img/circle/4.jpg" alt="4" title="4">
+        <img src="img/circle/5.jpg" alt="5" title="5">
+        <img src="img/circle/1.jpg" alt="1" title="1">
+    </div>
+    <div id="button">
+        <div id="buttons">
+            <ul>
+                <li><span index="1" class="on"></span></li>
+                <li><span index="2"></span></li>
+                <li><span index="3"></span></li>
+                <li><span index="4"></span></li>
+                <li><span index="5"></span></li>
+            </ul>
+        </div>
+        <div id="type">
+            <a href="javascript:;" id="circle" class="typeBtn">关闭平滑</a>
+            <a href="javascript:;" id="auto" class="typeBtn">关闭自动</a>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+    </div>
+</div>
+
+</body>
+</html>

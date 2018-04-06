@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>带缩略图的图片轮播效果</title>
+<style>
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#box{
+    width:600px;
+    height:400px;
+    padding: 0px 30px 100px;
+    margin:0 auto;
+    background: #666666;
+}
+h2{
+    margin:0;
+    line-height:50px;
+    font-size:18px;
+    color:#fff;
+}
+#con{
+    width:600px;
+    height:400px;
+    position:relative;
+    background: #fff;
+}
+#con a{
+    position: absolute;
+    top:175px;
+    width:50px;
+    height:50px;
+}
+#con #left{
+    background: url(img/left.png) no-repeat;
+    left: 0;
+}
+#con #right{
+    background: url(img/left.png) no-repeat 0 -100px;
+    right: 0;
+}
+#con #left:hover{
+    background: url(img/left.png) no-repeat 0 -50px;
+}
+#con #right:hover{
+    background: url(img/left.png) no-repeat 0 -150px;
+}
+#dot{
+    position: absolute;
+    bottom: -30px;
+    left: 250px;
+}
+#dot li{
+    border-radius:50%;
+    background-color: #66FFFF;
+    width:16px;
+    height:16px;
+    float: left;
+    margin-right:10px;
+    position:relative;
+}
+#dot li div {
+    position:absolute;
+    top:-112px;
+    left:-46px;
+    width:100px;
+    height:100px;
+    border:2px solid #fff;
+    display:none;
+}
+#dot li:hover div{
+    display:block;
+}
+#dot li span {
+    border:5px solid transparent;
+    border-top-color:#fff;
+    border-bottom:none;
+    position: absolute;
+    bottom: -7px;
+    left: 47px;
+}
+
+#dot img{
+    width:100px;
+    height:100px;
+}
+</style>
+
+</head>
+<body>
+<div id="box">
+    <h2>带缩略图的图片轮播</h2>
+    <div id="con">
+        <img id="img"/>
+        <a href="" title="上一张" id="left"></a>
+        <a href="" title="下一张" id="right"></a>
+        <ul id="dot">
+            <li>
+                <div>
+                    <img src="img/1.jpg" alt="">
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="img/2.jpg" alt="">
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="img/3.jpg" alt="">
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="img/4.jpg" alt="">
+                    <span></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

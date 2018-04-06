@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myIndex</title>
+    <style>
+        body,h2{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            padding: 50px;
+            width: 400px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px #ccc;
+            font: 20px 'Microsoft YaHei',微软雅黑;
+            color: #0a8cd2;
+        }
+        .wrap{
+            width: 100%;
+        }
+        .title,a {
+            text-indent: 20px;
+            cursor: pointer;
+            line-height: 2.0;
+            border-radius: 5px;
+            width: 100%;
+            color: #0a8cd2;
+            display: block;
+            text-decoration: none;
+        }
+        .title{
+            
+            display: block;
+            font-size: 25px;
+        }
+        .title:hover,.wrap a:hover{
+            -webkit-transition: 0.6s ease;
+            -moz-transition: 0.6s ease;
+            -o-transition: 0.6s ease;
+            -ms-transition:all 0.6s ease;
+            transition: 0.6s ease;
+            text-indent: 60px;
+            background-color: #0a8cd2;
+            color: #fff;
+        }
+        
+        .title.closed+.list{
+            -webkit-transform: scale(1,0);
+            -moz-transform: scale(1,0);
+            -o-transform: scale(1,0);
+            -ms-transform: scale(1,0);
+            transform: scale(1,0);
+            -webkit-transition-duration: 0s;
+            -moz-transition-duration: 0s;
+            -o-transition-duration: 0s;
+            -ms-transition-duration: 0s;
+            transition-duration: 0s;
+            height: 0px;
+        }
+        wrap:hover{
+            font-color: #fff;
+            background-color: #0a8cd2;
+        }
+        .list{
+            padding-left: 30px;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -o-transition: 0.6s;
+            -ms-transition: 0.6s;
+            transition: 0.6s;
+            -webkit-transform-origin:top center;
+            -moz-transform-origin:top center;
+            -o-transform-origin:top center;
+            -ms-transform-origin:top center;
+            transform-origin:top left;
+        }
+        
+    </style>
+</head>
+<body>
+<div id="main">
+    <section class="wrap">
+        <h2 class="title closed">一、图片轮播</h2>
+        <div class="list">
+            <a href="demo.html">水平滚动轮播</a>
+            <a href="demo.html">带小图标轮播</a>
+        </div>
+    </section>
+    <section class="wrap">
+        <h2 class="title closed">二、仿站</h2>
+        <div class="list">
+            <a href="http://shinyruo.me">ife新世界</a>
+            <a href="">电商</a>
+        </div>
+    </section>
+    <section class="wrap">
+        <h2 class="title closed">三、其他效果</h2>
+        <div class="list">
+            <a href=""></a>
+        </div>
+    </section>
+    <section class="wrap">
+        <h2 class="title closed">四、vue</h2>
+        <div class="list">
+            <a href="https://linhui233.github.io/vue_pos/">快餐店pos</a>
+        </div>
+    </section>
+</div>
+<script>
+    var main = document.getElementById('main');
+    var titles = main.getElementsByClassName('title');
+    var len = titles.length;
+    console.log(titles);
+    for(var i=0;i<len;i++){
+        (function(i){
+            titles[i].onclick = function(){
+                console.log(i);
+                titles[i].classList.toggle('closed');
+                for(var j=0;j<len;j++){
+                    if(i != j){
+                        titles[j].classList.add('closed');
+                    }
+
+                }
+
+            }
+        })(i);
+    }
+</script>
+</body>
+</html>

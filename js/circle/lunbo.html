@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>轮播</title>
+<style>
+.all{
+    position:relative;
+    width:437px;
+    height:509px;
+}
+.btn{
+    position:relative;
+    float:left;
+    left:50%;
+}
+.btn ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    position:relative;
+
+    left:-50%;
+
+}
+.btn li {
+    float:left;
+    display:inline;
+    margin-right:8px;
+}
+.box{
+    border:5px solid gray;
+    position:relative;
+    width:400px;
+    height:400px;
+}
+.change{
+    width:40px;
+    height:40px;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.wrap{
+    clear:both;
+    text-align:center;
+}
+.mode{
+    display:inline-block;
+    text-align:center;
+    margin-right:10px;
+}
+#front{
+    position:absolute;
+    left:10px;
+    vertical-align: middle;
+}
+
+#after{
+    position:absolute;
+    right:10px;
+    vertical-align: middle;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+</head>
+<body>
+<div class="all">
+    <div class="btn">
+        <ul>
+            <li><button id="mode-circle" class="mode">循环切换</button></li>
+            <li><button id="mode-order" class="mode">顺序切换</button></li>
+        </ul>
+
+
+    </div>
+
+    <p class="wrap">图片可从最后一张跳转到第一张循环切换</p>
+    <div class="box">
+        <button id="front" class="change" onclick="changeImg(this.id)"><</button>
+        <img src="img/1.jpg" id="img">
+        <span>1</span>
+        <button id="after" class="change" onclick="changeImg(this.id)">></button>
+    </div>
+</div>
+</body>
+<script>
+    var mode = 'circle';
+    function changeImg(id){
+        var img = document.getElementById('img');
+        var index = img.getAttribute('src').indexOf('.')-1;
+        var numNow = img.getAttribute('src').charAt(index);
+        var span = img.nextElementSibling;
+        numNow = id === 'front' ? front(numNow):after(numNow);
+
+        span.innerText = numNow;
+        var ctx = "img/"+numNow+'.jpg';
+        img.setAttribute('src',ctx);
+
+    }
+    function after(numNow){
+        if(mode === 'circle'){
+            numNow++;
+            if(numNow>4){
+                numNow = 1;
+            }
+        }else{
+            if(numNow<4){
+                numNow++;
+            }
+        }
+        return numNow;
+    }
+
+    function front(numNow){
+        if(mode === 'circle'){
+            numNow--;
+            if(numNow<=0){
+                numNow = 4;
+            }
+        }else{
+            if(numNow>1){
+                numNow--;
+            }
+        }
+        return numNow;
+    }
+    function changeMode(){
+        var type = this.getAttribute('id');
+        if(type === 'mode-scircle'){
+            mode = 'circle';
+        }else {
+            mode = 'order';
+        }
+
+    }
+    window.onload = function(){
+        var btns = document.getElementsByClassName('mode');
+        var i;
+        for(i = 0; i<btns.length; i++){
+            btns[i].onclick = changeMode;
+        }
+    }
+</script>
+</html>
