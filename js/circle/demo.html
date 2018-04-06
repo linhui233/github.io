@@ -107,154 +107,7 @@
         }
     </style>
     <script>
-        window.onload = function (){
-            //将所有的全局变量放入circle变量中,防止污染全局变量
-            //具体的参数也可以在这里设置
-            var circle = {
-                index: 1,
-                //time和interval用来调整画面帧数
-                time: 300,//位移总时长
-                interval: 5,//位移间隔时间,
-                timer:null,
-                circled: true,
-                auto: true,
-                animating: false,
-                container: document.getElementById('container'),
-                list: document.getElementById('list'),
-                prev: document.getElementById('prev'),
-                next: document.getElementById('next'),
-                buttons: document.getElementById('buttons').getElementsByTagName('span'),
-                circleBtn: document.getElementById('circle'),
-                autoBtn: document.getElementById('auto')
-                
-            };
-            function animate(offset){
-                circle.animating = true;
-                var newLeft = parseInt(circle.list.style.left) + offset;
-                var speed = offset/(circle.time/circle.interval);
-                
-                function go(){
-                    //递归滑动，直到滑到下一张图片
-                    if(circle.circled){
-                        if((speed < 0 && parseInt(circle.list.style.left) > newLeft) || (speed > 0 &&
-                                parseInt(circle.list.style.left) < newLeft)){
-                            circle.list.style.left = parseInt(circle.list.style.left) + speed +'px';
-                            setTimeout(go,circle.interval);
-                        }else{
-                            circle.list.style.left = newLeft + 'px';
-                            if(newLeft > -600){
-                                circle.list.style.left = -3000 + 'px';
-                            }
-                            if(newLeft < -3000){
-                                circle.list.style.left = -600 + 'px';
-                            }
-                            circle.animating = false;
-                        }
-                    }else{
-                        circle.list.style.left = newLeft + 'px';
-                        if(newLeft > -600){
-                            circle.list.style.left = -3000 + 'px';
-                        }
-                        if(newLeft < -3000){
-                            circle.list.style.left = -600 + 'px';
-                        }
-                        circle.animating = false;
-                    }
-                    
-                }
-                go();
-                
-                
-            }
-            
-            function showButton(){
-                //先清空
-                for(var i=0;i<circle.buttons.length;i++){
-                    if(circle.buttons[i].className == 'on'){
-                        circle.buttons[i].className = '';
-                        break;
-                    }
-                    
-                }
-                //再点亮
-                circle.buttons[circle.index -1].className = 'on';
-            }
-            circle.next.onclick = function (){
-                if(circle.animating){
-                    return;
-                }
-                if(circle.index == 5){
-                    circle.index = 1;
-                }else{
-                    circle.index += 1;
-                }
-                showButton();
-                if(!circle.animating){
-                    animate(-600);
-                }
-            }
-            circle.prev.onclick = function(){
-                if(circle.animating){
-                    return;
-                }
-                if(circle.index == 1){
-                    circle.index = 5;
-                }else{
-                    circle.index -= 1;
-                }
-                showButton();
-                
-                animate(600);
-                
-                
-            }
-            //圆点切换
-            for(var i=0;i<circle.buttons.length;i++){
-                circle.buttons[i].onclick = function(){
-                    var myIndex  = this.getAttribute('index');
-                    
-                    //优化:点击的为目前的点，则不切换;
-                    if(myIndex == circle.index){
-                        return;
-                    }
-                    var offset = (myIndex - circle.index)*-600;
-                    animate(offset);
-                    circle.index = parseInt(myIndex);//这里转换为数字型，数字不能用string类型的下标
-                    showButton();
-                }
-            }
-            
-            //自动播放
-            function play(){
-                circle.timer = setInterval(function(){
-                    circle.next.onclick();
-                },2000)
-            }
-            
-            function stop(){
-                clearInterval(circle.timer);
-            }
-            
-            circle.container.onmouseover = stop;
-            circle.container.onmouseout = function(){
-                if(circle.auto){
-                    play();
-                }
-            };
-            
-            play();
-            
-            circle.autoBtn.onclick = function(){
-                circle.auto = !circle.auto;
-                circle.autoBtn.classList.toggle("on");
-                stop();
-            }
-            circle.circleBtn.onclick = function(){
-                circle.circled = !circle.circled;
-                circle.circleBtn.classList.toggle("on");
-            }
-            
-        }
+    
     </script>
 </head>
 <body>
@@ -286,6 +139,155 @@
         <a href="javascript:;" id="next" class="arrow">&gt;</a>
     </div>
 </div>
+<script>
+    window.onload = function (){
+        //将所有的全局变量放入circle变量中,防止污染全局变量
+        //具体的参数也可以在这里设置
+        var circle = {
+            index: 1,
+            //time和interval用来调整画面帧数
+            time: 300,//位移总时长
+            interval: 5,//位移间隔时间,
+            timer:null,
+            circled: true,
+            auto: true,
+            animating: false,
+            container: document.getElementById('container'),
+            list: document.getElementById('list'),
+            prev: document.getElementById('prev'),
+            next: document.getElementById('next'),
+            buttons: document.getElementById('buttons').getElementsByTagName('span'),
+            circleBtn: document.getElementById('circle'),
+            autoBtn: document.getElementById('auto')
 
+        };
+        function animate(offset){
+            circle.animating = true;
+            var newLeft = parseInt(circle.list.style.left) + offset;
+            var speed = offset/(circle.time/circle.interval);
+
+            function go(){
+                //递归滑动，直到滑到下一张图片
+                if(circle.circled){
+                    if((speed < 0 && parseInt(circle.list.style.left) > newLeft) || (speed > 0 &&
+                            parseInt(circle.list.style.left) < newLeft)){
+                        circle.list.style.left = parseInt(circle.list.style.left) + speed +'px';
+                        setTimeout(go,circle.interval);
+                    }else{
+                        circle.list.style.left = newLeft + 'px';
+                        if(newLeft > -600){
+                            circle.list.style.left = -3000 + 'px';
+                        }
+                        if(newLeft < -3000){
+                            circle.list.style.left = -600 + 'px';
+                        }
+                        circle.animating = false;
+                    }
+                }else{
+                    circle.list.style.left = newLeft + 'px';
+                    if(newLeft > -600){
+                        circle.list.style.left = -3000 + 'px';
+                    }
+                    if(newLeft < -3000){
+                        circle.list.style.left = -600 + 'px';
+                    }
+                    circle.animating = false;
+                }
+
+            }
+            go();
+
+
+        }
+
+        function showButton(){
+            //先清空
+            for(var i=0;i<circle.buttons.length;i++){
+                if(circle.buttons[i].className == 'on'){
+                    circle.buttons[i].className = '';
+                    break;
+                }
+
+            }
+            //再点亮
+            circle.buttons[circle.index -1].className = 'on';
+        }
+        circle.next.onclick = function (){
+            if(circle.animating){
+                return;
+            }
+            if(circle.index == 5){
+                circle.index = 1;
+            }else{
+                circle.index += 1;
+            }
+            showButton();
+            if(!circle.animating){
+                animate(-600);
+            }
+        }
+        circle.prev.onclick = function(){
+            if(circle.animating){
+                return;
+            }
+            if(circle.index == 1){
+                circle.index = 5;
+            }else{
+                circle.index -= 1;
+            }
+            showButton();
+
+            animate(600);
+
+
+        }
+        //圆点切换
+        for(var i=0;i<circle.buttons.length;i++){
+            circle.buttons[i].onclick = function(){
+                var myIndex  = this.getAttribute('index');
+
+                //优化:点击的为目前的点，则不切换;
+                if(myIndex == circle.index){
+                    return;
+                }
+                var offset = (myIndex - circle.index)*-600;
+                animate(offset);
+                circle.index = parseInt(myIndex);//这里转换为数字型，数字不能用string类型的下标
+                showButton();
+            }
+        }
+
+        //自动播放
+        function play(){
+            circle.timer = setInterval(function(){
+                circle.next.onclick();
+            },2000)
+        }
+
+        function stop(){
+            clearInterval(circle.timer);
+        }
+
+        circle.container.onmouseover = stop;
+        circle.container.onmouseout = function(){
+            if(circle.auto){
+                play();
+            }
+        };
+
+        play();
+
+        circle.autoBtn.onclick = function(){
+            circle.auto = !circle.auto;
+            circle.autoBtn.classList.toggle("on");
+            stop();
+        }
+        circle.circleBtn.onclick = function(){
+            circle.circled = !circle.circled;
+            circle.circleBtn.classList.toggle("on");
+        }
+
+    }
+</script>
 </body>
 </html>
