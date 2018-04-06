@@ -21,7 +21,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="487" />
     <option name="y" value="370" />
     <option name="width" value="974" />
@@ -50,17 +50,6 @@
             <path>
               <item name="github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="github.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="dianshan" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -101,15 +90,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522998458521</updated>
-      <workItem from="1522998459865" duration="570000" />
+      <workItem from="1522998459865" duration="827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="570000" />
+    <option name="totallyTimeSpent" value="827000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="487" y="370" width="974" height="615" extended-state="1" />
+    <frame x="487" y="370" width="974" height="615" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50641024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
