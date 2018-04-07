@@ -4,38 +4,55 @@
     margin-left: auto;
     margin-right: auto;
 }
-.left{
+.leftArea{
     float: left;
 }
-.right{
-    float:right;
+.rightArea{
+    float: right;
+}
+.orange{
+    color: #ff7300;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
 }
 /*topBar*/
 .topBar{
     height: 31px;
     background-color: #F7F7F7;
+    line-height: 31px;
 }
 .topBar a:hover{
     color:red;
 }
 .collection {
-    background: url("../images/icon/xing.jpg") no-repeat;
+    background: url("../images/icon/collection.jpg") left center no-repeat;
+    padding-left: 19px;
+    font-weight: bold;
 }
 /*logo*/
 .logoBar{
-    background-color: #1D7AD9;
     height: 85px;
+    background-color: #1D7AD9;
 }
 .logo{
     padding-left: 41px;
     padding-top: 13px;
 }
-.logoBar-search{
+.search_box{
     width:430px;
+    padding-top: 23px;
+    padding-left: 185px;
 }
 .search_text{
-    width:360px;
-    height:35px;
+    background-color: #fff;
+    width:350px;
+    height: 35px;
+    line-height: 35px\9;/*css hack*/
+    padding: 0 5px;
 }
 .search_btn{
     width: 70px;
@@ -45,3 +62,175 @@
     background-color: #FF8C00;
     color:#FFF;
 }
+.shopCar{
+    width: 145px;
+    height: 35px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei","微软雅黑";
+    line-height: 35px;
+    background-color: #FF8C00;
+    margin-top: 23px;
+}
+.shopText{
+    color: #FFF;
+    height: 100%;
+    width: 87px;
+    border-right:  solid 1px #E27A00;
+    background: url(../images/icon/shopIcon.png) 10px center no-repeat;
+    text-indent: 40px;
+}
+.shopNum{
+    width: 27px;
+    height: 35px;
+    border-left: solid 1px #FF9C01;
+    background: url(../images/icon/sj.png) 33px center no-repeat;
+    text-align: right;
+    padding-right: 29px;
+}
+/*导航*/
+.navBar{
+    height: 35px;
+    background-color: #1369C0;
+    color: #FFF;
+}
+.shopClass{
+    width: 200px;
+    position:relative;
+}
+.shopClass i{
+    display: inline-block;
+    overflow: hidden;
+    width: 11px;
+    height: 7px;
+    background: url("../images/icon/down.png") left center no-repeat;
+    margin-left: 11px;
+}
+.shopClass h3{
+    text-align: center;
+    line-height: 35px;
+}
+.nav{
+    line-height: 35px;
+}
+.nav li{
+    float: left;
+}
+.nav a{
+    height: 35px;
+    display: inline-block;
+    padding: 0 25px;
+    color: #FFF;
+}
+.nav .active{
+    background-color: #4593fd;
+}
+.nav,.shopClass h3{
+    font-family: "Microsoft YaHei","微软雅黑";
+}
+/*商品弹出列表*/
+.shopClass-show{
+    background-color: #4593fd;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 100%;
+}
+.shopClass-item{
+    font-size: 12px;
+    padding: 14px 12px 14px 10px;
+    border-bottom: #3487f2 solid 1px;
+    border-top: #5aa1fe solid 1px;
+}
+.shopClass-item dt{
+    height: 23px;
+    background: url("../images/icon/right.png") right center no-repeat;
+}
+.shopClass-item .b{
+    font: 14px/1 "Microsoft YaHei","微软雅黑";
+}
+.shopClass-item a{
+    color: #FFF;
+}
+.shopClass-item a:hover{
+    text-decoration: underline;
+}
+.shopClass-item dd a{
+    color: #c2d9f8;
+}
+.shopClass-item .aLink{
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    background: url("../images/icon/aLink.png") left center no-repeat;
+    text-align: center;
+    text-decoration: underline;
+}
+/*弹出的菜单*/
+.shopClass-list{
+    width: 568px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 35px;
+    left: 100%;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+.shopList-item{
+    width: 530px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+.shopList-item dt{
+    color: #4b88da;
+    font-weight: bold;
+    margin-right: 15px;
+    line-height: 24px;
+    height: 24px;
+}
+.shopList-item dd{
+    color: #666666;
+    padding-left: 68px;
+    margin-top: -24px;
+    line-height: 24px;
+}
+.shopList-item dd a{
+    margin-right: 13px;
+}
+.shopList-container{
+    padding: 0px 20px;
+}
+.shopList-btn{
+    padding: 15px 0 ;
+}
+.shopList-btn a{
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 14px 0 8px;
+    background-color: #2785e6;
+    color: #fff;
+    text-indent: 8px;
+}
+.shopList-btn i{
+    background: url("../images/icon/right.png") left center no-repeat;
+    margin-left: 7px;
+}
+/*shopClass active状态*/
+.shopClass-active{
+    background-color: #fff;
+    border-left: 1px solid #0a8cd2;
+}
+.shopClass-active dt {
+    background: none;
+}
+.shopClass-active a,.shopClass-active dd a{
+    color: #000;
+}
+.shopClass-active .aLink{
+    color: #fff;
+    text-decoration: none;
+}
+
+
