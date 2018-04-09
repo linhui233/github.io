@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .col{
+            float: left;
+            height: 600px;
+            box-shadow: 1px 1px 5px RGBA(0,0,0,0.3);
+        }
+        .main{
+            width: 100%;
+            background-color: #ccc
+        }
+        .main-wrap{
+            margin: 0 190px 0 190px;
+        }
+        .main-wrap{
+            text-align: center;
+        }
+        .left{
+            width: 190px;
+            background-color: RGBA(10,140,210,0.5);
+            margin-left: -100%;
+            line-height: 600px;
+        }
+        .right{
+            width: 190px;
+            background-color: #ffbd19;
+            margin-left: -190px;
+        }
+    </style>
+</head>
+<body>
+<div class="main col">
+    main左上角
+    <div class="main-wrap">
+        main-wrap
+        <p>双飞翼不必设置左右栏的position: relative，也不必设置左右left、right值，只需多添加一个子元素包含</p>
+    </div>
+</div>
+<div class="left col">
+    半透明left
+</div>
+<div class="right col">
+    right
+</div>
+</body>
+</html>

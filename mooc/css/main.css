@@ -95,7 +95,7 @@
 }
 .shopClass{
     width: 200px;
-    position:relative;
+    position: relative;
 }
 .shopClass i{
     display: inline-block;
@@ -175,6 +175,8 @@
     left: 100%;
     box-shadow: 2px 0 5px rgba(0,0,0,0.3);
     box-sizing: border-box;
+    background-color: #fff;
+    z-index: 2;
 }
 .shopList-item{
     width: 530px;
@@ -232,5 +234,134 @@
     color: #fff;
     text-decoration: none;
 }
+/*banner图*/
+.banner{
+    z-index: 1;
+    height: 276px;
+    background: url("../images/banner.png") no-repeat;
+    margin-left: 200px;
+    background-size:100% 100%;
+}
+/*展示列表*/
+.allList {
+}
+.shopView-title{
+    position: relative;
+    height: 75px;
+    font: 23px/75px "Microsoft YaHei","微软雅黑";
+    padding-left: 58px;
+    background: url("../images/icon/shopView.png") left center no-repeat;
 
+}
+.shopView-title a{
+    cursor: pointer;
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    right: 23px;
+    bottom: -15px;
+}
+.content-ad img{
+   float: left;
+}
+.content-list{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ccc;
+    border-bottom: 3px solid #ff7201;
+}
+.content-list li {
+    width: 199px;
+    height: 351px;
+    border-right: 1px solid #ccc;
+    padding-top: 45px;
+    overflow:hidden;
+}
+.content-list-top {
+    height: 234px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 30px;
 
+}
+.content-list-top figure{
+    padding-left: 30px;
+}
+.content-list-top figcaption{
+    margin-top: 14px;
+    font-family: "Microsoft YaHei",微软雅黑;
+    font-size: 13px;
+    font-weight: bold;
+    text-indent: 3px;
+    line-height: 24px;
+}
+.content-list-top h4{
+    font-size: 11px;
+    color: #ff7300;
+    text-indent: 42px;
+}
+.content-list-bottom {
+    padding: 26px 0 0 15px;
+    height: 85px;
+    width: 199px;
+    box-sizing: border-box;
+}
+.content-list-bottom img{
+    float: left;
+}
+.content-list-bottom figcaption{
+    margin-left: 10px;
+    color: #ff7300;
+    font-size: 12px;
+    line-height: 18px;
+    height: 18px;
+    width: 90px;
+    float: left;
+}
+.content-list-bottom figcaption h4{
+    font-size: 12px;
+    color: black;
+
+}
+.rmb{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url("../images/icon/rmb.png") no-repeat;
+}
+.content-list li:last-child{
+    padding-right: 10px;
+}
+.content-list-top .list-top-eat{
+    text-indent: 35px;
+}
+.list-top-eat h4{
+    text-indent: 61px;
+}
+.content-list-bottom .list-bottom-eat{
+    margin-left: 25px;
+    font-size: 12px;
+    color: black;
+    line-height: 20px;
+}
+.drink .content-list-top{
+    padding-left: 20px;
+}
+.footer{
+    width: 100%;
+    height: 230px;
+    margin: 40px auto 7px auto;
+    background-color: #d4d4d4;
+    text-align: center;
+    padding-top: 44px;
+}
+.footer-info{
+    line-height: 24px;
+}
+.info-safe{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.info-safe img{
+    margin-right: 24px;
+}

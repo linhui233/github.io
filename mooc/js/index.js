@@ -7,7 +7,8 @@ $(document).ready(function(){
         sub.removeClass('hide')
     })
     .on('mouseleave',function(e) {
-        
+        sub.addClass('hide');
+        activeRow.removeClass('shopClass-active');
     })
     .on('mouseenter','dl',function(e) {
         if(!activeRow) {
