@@ -18,6 +18,7 @@
             box-shadow: 0px 0px 5px #ccc;
             font: 20px 'Microsoft YaHei',微软雅黑;
             color: #0a8cd2;
+            box-sizing: border-box;
         }
         .wrap{
             width: 100%;
@@ -77,6 +78,9 @@
             -o-transform-origin:top center;
             -ms-transform-origin:top center;
             transform-origin:top left;
+        }
+        .list a{
+            font-size: 20px;
         }
         @media screen and (max-width:600px){
             .main{
@@ -142,11 +146,9 @@
     var main = document.getElementById('main');
     var titles = main.getElementsByClassName('title');
     var len = titles.length;
-    console.log(titles);
     for(var i=0;i<len;i++){
         (function(i){
             titles[i].onclick = function(){
-                console.log(i);
                 titles[i].classList.toggle('closed');
                 for(var j=0;j<len;j++){
                     if(i != j){
@@ -158,7 +160,15 @@
             }
         })(i);
     }
-    
+    if(window.console){
+        var cons = console;
+        if(cons){
+            cons.log("%c\n","color:yellow");
+        }
+        cons.log("2018应届生求职中");
+        cons.log("邮箱:%cb563093718@163.com","color:red");
+        cons.log("电话:%c13205817385","color:red");
+    }
 </script>
 </body>
 </html>
