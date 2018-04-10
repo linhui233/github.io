@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab标签页</title>
+    <style>
+        ul,li,body{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        .notice{
+            width: 398px;
+            height: 150px;
+            margin: 10px auto;
+            border: 1px solid #eee;
+            overflow: hidden;
+            box-shadow: 2px 1px 5px RGBA(0,0,0,0.5);
+        }
+        .notice-tit{
+            width: 100%;
+            height: 40px;
+            
+            position: relative;
+            background: #f7f7f7;
+            
+        }
+        .notice-tit a{
+            color: #000;
+        }
+        .notice-tit ul{
+            position: absolute;
+            width: 403px;
+            left: -1px;
+        }
+        .notice-tit li{
+            width: 78px;
+            height: 39px;
+            line-height: 39px;
+            list-style: none;
+            float: left;
+            background: #f7f7f7;
+            padding:0 1px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+        .notice-tit li a:hover{
+            color: #ff791d;
+        }
+        .notice-tit li a:link,.noticed-tit li a:visited{
+            text-decoration: none;
+            color: #000;
+            
+        }
+        .notice-tit li.select{
+            background: #fff;
+            border-bottom-color: #fff;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+            padding: 0;
+            font-weight: bold;
+        }
+        .notice-con .mod{
+            margin: 20px 50px ;
+        }
+        .notice-con .mod ul li{
+            list-style: none;
+            width: 145px;
+            height: 35px;
+            line-height: 35px;
+            float: left;
+            overflow: hidden;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="notice">
+        <div id="notice-tit" class="notice-tit">
+            <ul>
+                <li class="select">
+                    <a href="">tab1</a>
+                </li>
+                <li>
+                    <a href="">tab2</a>
+                </li>
+                <li>
+                    <a href="">tab3</a>
+                </li>
+                <li class="">
+                    <a href="">tab4</a>
+                </li>
+                <li>
+                    <a href="">tab5</a>
+                </li>
+            </ul>
+        </div>
+        <div id="notice-con" class="notice-con">
+            <div class="mod">
+                <ul>
+                    <li><a href="">tab1-content1</a></li>
+                    <li><a href="">tab1-content2</a></li>
+                    <li><a href="">tab1-content3</a></li>
+                    <li><a href="">tab1-content4</a></li>
+                </ul>
+            </div>
+            <div class="mod hide">
+                <ul>
+                    <li><a href="">tab2-content1</a></li>
+                    <li><a href="">tab2-content2</a></li>
+                    <li><a href="">tab2-content3</a></li>
+                    <li><a href="">tab2-content4</a></li>
+                </ul>
+            </div>
+            <div class="mod hide">
+                <ul>
+                    <li><a href="">tab3-content1</a></li>
+                    <li><a href="">tab3-content2</a></li>
+                    <li><a href="">tab3-content3</a></li>
+                    <li><a href="">tab3-content4</a></li>
+                </ul>
+            </div>
+            <div class="mod hide">
+                <ul>
+                    <li><a href="">tab4-content1</a></li>
+                    <li><a href="">tab4-content2</a></li>
+                    <li><a href="">tab4-content3</a></li>
+                    <li><a href="">tab4-content4</a></li>
+                </ul>
+            </div>
+            <div class="mod hide">
+                <ul>
+                    <li><a href="">tab5-content1</a></li>
+                    <li><a href="">tab5-content2</a></li>
+                    <li><a href="">tab5-content3</a></li>
+                    <li><a href="">tab5-content4</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <script src="js/tab.js"></script>
+</body>
+</html>

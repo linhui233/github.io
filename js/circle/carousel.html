@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转木马</title>
+    <style>
+        body,ul,li,img{
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            border: none;
+        }
+        .container{
+            position: relative;
+            width: 800px;
+            height: 270px;
+        }
+        .poster-btn{
+            background-color: red;
+            width: 100px;
+            height: 270px;
+            z-index: 10;
+        }
+        .post-prev-btn{
+            position: absolute;
+            left: 0;
+        }
+        .post-next-btn{
+            position: absolute;
+            right: 0;
+        }
+        .poster-list{
+            width: 100%;
+            height: 100%;
+        }
+        .poster-item{
+            position: absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/circle.js"></script>
+</head>
+<body>
+<div class="J_Poster container" data-setting='{
+            width: 900,
+            height: 270,
+            posterWidth: 640,
+            posterHeight: 270,
+            scale: 0.9,
+            speed: 500,
+            verticalAlign:"middle",
+            test: "xxx"
+}'>
+    <div class="poster-btn post-prev-btn">&lt;</div>
+    <div class="poster-btn post-next-btn">&gt;</div>
+    <ul class="poster-list">
+        <li class="poster-item"><a href=""><img src="img/circle/1_1.jpg" alt=""></a></li>
+        <li class="poster-item"><a href=""><img src="img/circle/2_1.jpg" alt=""></a></li>
+        <li class="poster-item"><a href=""><img src="img/circle/3_1.jpg" alt=""></a></li>
+        <li class="poster-item"><a href=""><img src="img/circle/4_1.jpg" alt=""></a></li>
+        <li class="poster-item"><a href=""><img src="img/circle/5_1.jpg" alt=""></a></li>
+    </ul>
+</div>
+</body>
+</html>

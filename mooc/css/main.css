@@ -154,6 +154,9 @@
 .shopClass-item a:hover{
     text-decoration: underline;
 }
+.shopClass-item dd{
+    height: 16px;
+}
 .shopClass-item dd a{
     color: #c2d9f8;
 }
@@ -236,7 +239,6 @@
 }
 /*banner图*/
 .banner{
-    z-index: 1;
     height: 276px;
     background: url("../images/banner.png") no-repeat;
     margin-left: 200px;
