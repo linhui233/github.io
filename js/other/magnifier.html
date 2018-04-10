@@ -9,21 +9,98 @@
             margin: 0;
         }
         .box{
-            width: 250px;
-            height: 300px;
-            border: 1px solid #000;
+            width: 254px;
+            height: 304px;
+            border: 2px solid black;
+            box-sizing: border-box;
+            position: relative;
+            margin: 10px 0 0 10px;
         }
-        .book img{
+        .box img{
             
             display: block;
             width: 250px;
             height: 300px;
             
         }
+        .floatBox{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background: #000;
+            opacity: 0.3;
+        }
+        .bigBox{
+            overflow: hidden;
+            position: absolute;
+            top: 10px;
+            left: 400px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .bigBox img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 750px;
+            height: 900px;
+        }
     </style>
 </head>
 <body>
-<div class="box"><img src="images/js3.jpg" alt=""></div>
-<div class="bigBox"><img src="" alt=""></div>
+<div id="main" class="main">
+    <div id="box" class="box">
+        <div id="floatBox" class="floatBox"></div>
+        <img id="sImg" src="images/js3.jpg" alt="">
+    </div>
+    <div id="bigBox" class="bigBox"><img id="bigImg" src="images/js3.jpg" alt=""></div>
+</div>
+<script>
+window.onload = function(ev){
+    var box = document.getElementById('box');
+    var sImg = document.getElementById('sImg');
+    var floatBox = document.getElementById('floatBox');
+    var bigImg = document.getElementById('bigImg');
+    var bigBox = document.getElementById('bigBox');
+    box.onmouseover = function(){
+        floatBox.style.display = 'block';
+        bigBox.style.display = 'block';
+        
+    }
+    box.onmouseout = function(){
+        floatBox.style.display = 'none';
+        bigBox.style.display = 'none';
+    }
+    box.onmousemove = function(ev){
+        var event = ev || window.event;
+        var left = event.clientX  - floatBox.offsetWidth/2 - sImg.offsetLeft;
+        var top = event.clientY  - floatBox.offsetHeight/2 - sImg.offsetTop ;
+        
+        if(left < 0){
+            left = 0;
+        }else if(left+floatBox.offsetWidth > sImg.offsetWidth){
+            left = sImg.offsetWidth - floatBox.offsetWidth;
+            
+        }
+        if(top<0){
+            top = 0;
+        }else if(top+floatBox.offsetHeight > sImg.offsetHeight){
+            top = sImg.offsetHeight - floatBox.offsetHeight;
+        }
+        var percentX = (bigImg.offsetWidth - bigBox.offsetWidth)/(sImg.offsetWidth-floatBox.offsetWidth);
+        var percentY = (bigImg.offsetHeight - bigBox.offsetHeight)/(sImg.offsetHeight - floatBox.offsetHeight);
+        console.log(percentY);
+        console.log(percentY * top);
+        floatBox.style.left = left +'px';
+        floatBox.style.top = top + 'px';
+        bigImg.style.left = -percentX*left +'px';
+        bigImg.style.top = -percentY*top + 'px';
+    }
+}
+</script>
 </body>
 </html>

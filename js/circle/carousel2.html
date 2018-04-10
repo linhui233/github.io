@@ -147,7 +147,7 @@
         var delay = null;
         for(var i=0;i<posterList.length;i++){
             (function(i){
-                posterList[i].onmouseover = function(){
+                posterList[i].onmouseenter = function(){
                     clearInterval(timer);
                     clearTimeout(delay);
                     lastIndex = index;
@@ -156,7 +156,7 @@
                         scroll(i);
                     },500)
                 }
-                posterList[i].onmouseout = function(){
+                posterList[i].onmouseleave = function(){
                     timer = setInterval(function(){
                         index++;
                         index%=len;
