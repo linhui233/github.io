@@ -1,4 +1,4 @@
-body,ul,li,input,dl,dd,dt{
+body,ul,li,input,h1,h2,h3,h4,h5,h6,dl,dd,dt,figure{
     padding: 0;
     margin: 0;
 }
