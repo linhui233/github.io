@@ -2,6 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/js/circle/img/lanyue" />
+    <bookmark url="file://$PROJECT_DIR$/js/other/css/style.css" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="844095a5-55d2-49c4-9463-9600b28b3707" name="Default" comment="" />
@@ -20,40 +21,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="150" column="21" lean-forward="true" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/other/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="81" lean-forward="false" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/other/style/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/circle/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            <state relative-caret-position="279">
+              <caret line="107" column="26" lean-forward="true" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -72,16 +41,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>collection</find>
-      <find>absolute</find>
-      <find>电脑装机</find>
-      <find>aLink</find>
-      <find>shopList-item</find>
-      <find>active</find>
-      <find>收藏</find>
-      <find>father</find>
-      <find>id=&quot;a&quot;</find>
-      <find>id=&quot;b&quot;</find>
       <find>id=&quot;c&quot;</find>
       <find>shopClass-active</find>
       <find>id=&quot;d&quot;</find>
@@ -102,6 +61,16 @@
       <find>timer</find>
       <find>act</find>
       <find>console</find>
+      <find>st-scroll</find>
+      <find>st-panel-1</find>
+      <find>pt-panel</find>
+      <find>-webkit-backface-visibility</find>
+      <find>st-panel</find>
+      <find>transition</find>
+      <find>p</find>
+      <find>st-panel p</find>
+      <find>h2</find>
+      <find>st-desc</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,6 +100,7 @@
         <option value="$PROJECT_DIR$/js/other/style/reset.css" />
         <option value="$PROJECT_DIR$/js/other/style/style.css" />
         <option value="$PROJECT_DIR$/js/other/index.html" />
+        <option value="$PROJECT_DIR$/js/other/css/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -142,10 +112,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="905" />
-    <option name="y" value="13" />
+    <option name="x" value="742" />
     <option name="width" value="974" />
-    <option name="height" value="1040" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -186,7 +155,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,7 +184,14 @@
               <item name="githubio" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="other" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="githubio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="githubio" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="githubio" type="b2602c69:ProjectViewProjectNode" />
@@ -226,6 +201,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,12 +214,12 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\githubio\js\circle\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\web\githubio\js\other" />
       <recent name="D:\web\githubio\mooc" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\web\githubio\js\circle\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -260,24 +236,24 @@
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html (1)">
     <configuration name="carousel2.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/githubio/js/circle/carousel2.html" />
-    <configuration name="carousel.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/githubio/js/circle/carousel.html" />
     <configuration name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/githubio/index.html" />
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/githubio/js/other/index.html" />
     <configuration name="magnifier.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/githubio/js/other/magnifier.html" />
     <configuration name="text.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/githubio/js/circle/js/text.html" />
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.carousel.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.carousel2.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.text.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.magnifier.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.carousel2.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.text.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.magnifier.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.magnifier.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.carousel2.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.text.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.carousel.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.magnifier.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.carousel2.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.text.html" />
       </list>
     </recent_temporary>
   </component>
@@ -310,15 +286,16 @@
       <workItem from="1523358588083" duration="2039000" />
       <workItem from="1523363541459" duration="3370000" />
       <workItem from="1523366951874" duration="1335000" />
-      <workItem from="1523368775759" duration="2571000" />
+      <workItem from="1523368775759" duration="3734000" />
+      <workItem from="1523408934756" duration="13044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99887000" />
+    <option name="totallyTimeSpent" value="114094000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="905" y="13" width="974" height="1040" extended-state="0" />
+    <frame x="742" y="0" width="974" height="1047" extended-state="0" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2777778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -352,30 +329,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mooc/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mooc/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7854">
-          <caret line="357" column="43" lean-forward="true" selection-start-line="357" selection-start-column="43" selection-end-line="357" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/circle/lunbo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -631,7 +584,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/other/style/reset.css">
+    <entry file="file://$PROJECT_DIR$/js/other/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
@@ -639,7 +592,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/other/style/style.css">
+    <entry file="file://$PROJECT_DIR$/js/other/fonts/license.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -647,21 +600,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/other/fonts/Fontby.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/other/fonts/raphaelicons-webfont.ttf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1452">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/other/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="81" lean-forward="false" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
+        <state relative-caret-position="528">
+          <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/other/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="316" column="50" lean-forward="true" selection-start-line="316" selection-start-column="50" selection-end-line="316" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="150" column="21" lean-forward="true" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="279">
+          <caret line="107" column="26" lean-forward="true" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
