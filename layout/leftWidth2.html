@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>左固定右自适应实现2</title>
+    <title>双float</title>
     <style>
        body{
            padding: 0;
@@ -17,22 +17,19 @@
            background: #ff8000;
        }
        .right{
-           width: 100%;
+           float: left;
+           width: calc(100% - 200px);
            height: 600px;
-           margin-left: -200px;
-       }
-       .right-wrap{
-           margin-left: 200px;
-           height: 100%;
            background: #0080ff;
+        
        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="left"></div>
-        <div class="right">
-            <div class="right-wrap">asdsd</div>
+        <div class="right">calc(100% - 200px)
+            此方法无重叠
         </div>
     </div>
 </body>
