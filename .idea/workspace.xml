@@ -28,10 +28,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-773">
+            <state relative-caret-position="462">
               <caret line="108" column="43" lean-forward="false" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -50,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imgShow.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="imgShow.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/other/css/imgShow.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3784">
+            <state relative-caret-position="262">
               <caret line="172" column="12" lean-forward="false" selection-start-line="172" selection-start-column="12" selection-end-line="172" selection-end-column="12" />
               <folding />
             </state>
@@ -144,9 +144,9 @@
         <option value="$PROJECT_DIR$/js/other/index.html" />
         <option value="$PROJECT_DIR$/js/other/css/style.css" />
         <option value="$PROJECT_DIR$/js/other/css/reset.css" />
-        <option value="$PROJECT_DIR$/js/other/css/imgShow.css" />
         <option value="$PROJECT_DIR$/js/other/imgShow.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/other/css/imgShow.css" />
       </list>
     </option>
   </component>
@@ -156,7 +156,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="815" />
     <option name="y" value="7" />
     <option name="width" value="974" />
@@ -204,7 +204,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/circle/js/jquery-3.3.1.min.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vue_pos" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -287,16 +287,16 @@
       <workItem from="1523408934756" duration="17559000" />
       <workItem from="1523444644947" duration="3160000" />
       <workItem from="1523450879305" duration="2493000" />
-      <workItem from="1523453625275" duration="636000" />
+      <workItem from="1523453625275" duration="2014000" />
+      <workItem from="1523527727999" duration="123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124898000" />
+    <option name="totallyTimeSpent" value="126399000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="815" y="7" width="974" height="1042" extended-state="1" />
-    <editor active="true" />
+    <frame x="815" y="7" width="974" height="1042" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2777778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -606,14 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/other/css/imgShow.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3784">
-          <caret line="172" column="12" lean-forward="false" selection-start-line="172" selection-start-column="12" selection-end-line="172" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/other/imgShow.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
@@ -632,11 +624,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-773">
+        <state relative-caret-position="462">
           <caret line="108" column="43" lean-forward="false" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/other/css/imgShow.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="172" column="12" lean-forward="false" selection-start-line="172" selection-start-column="12" selection-end-line="172" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

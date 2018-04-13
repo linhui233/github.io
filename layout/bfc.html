@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bfc</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .left{
+            float: left;
+            width: 200px;
+            height: 600px;
+            background: #ff8000;
+        }
+        .right{
+            overflow: hidden;
+            height: 600px;
+            background: #0080ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+
+        </div>
+        <div class="right">
+            BFC的区域不会与外部浮动元素重叠
+            <p>此方法只需要将right区域设置overflow除了 visible 以外的值 属性即可</p>
+            <h3>如何触发bfc</h3>
+            <p>浮动元素：float 除 none 以外的值</p>
+            <p>绝对定位元素：position (absolute、fixed)</p>
+            <p>display 为 inline-block、table-cells、flex</p>
+            <p>overflow 除了 visible 以外的值 (hidden、auto、scroll)</p>
+        </div>
+    </div>
+</body>
+</html>
