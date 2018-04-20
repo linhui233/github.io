@@ -1,0 +1,86 @@
+body,ul,li,input,h3{
+    padding: 0;
+    margin: 0;
+}
+.main {
+    width: 480px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #000;
+}
+.video-title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    position: relative;
+}
+.video-title h3 {
+    float: left;
+}
+.video-title ul {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+.video-title li {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    background-color: #eee;
+    list-style: none;
+    float: left;
+    border-radius: 50%;
+}
+.title-btns {
+    position: absolute;
+    left: 100px;
+    
+}
+.title-btns span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.title-btns .prev{
+    border-radius: 10px 0 0 10px;
+}
+.title-btns .next{
+    margin-left: -4px;
+    border-radius: 0px 10px 10px 0px;
+}
+.video-list {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.video-list-move {
+    position: absolute;
+    height: 100%;
+}
+.video-list ul li {
+    width: 100px;
+    height: 100%;
+    list-style: none;
+    margin-right: 20px;
+    float: left;
+}
+.video-list ul li img {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+.video-list ul li span {
+    font-size: 14px;
+    line-height : 20px;
+}
+.video-title .current {
+    background-color: #000;
+}
+
