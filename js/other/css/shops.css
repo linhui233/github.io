@@ -1,0 +1,51 @@
+.leftNav{
+    width: 100px;
+    float: left;
+}
+.leftNav li{
+    padding: 10px 0;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+.leftNav li>div{
+    width: 100px;
+    height: 20px;
+}
+.leftNav li input{
+    visibility: hidden;
+    
+}
+.leftNav li.checked div{
+    width: 100px;
+    height: 40px;
+    border-left: 4px solid orangered;
+}
+.leftNav li div{
+    border-left: 4px solid #fff;
+}
+.shop-pages{
+    height: 600px;
+    overflow-y: scroll;
+}
+.shop-pages ul{
+    background-color: #ccc;
+}
+.shop-pages li shops{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.shop-pages shop{
+    margin-bottom: 20px;
+    width: 100px;
+    height: 150px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #eee;
+}
+.page{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
