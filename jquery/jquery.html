@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery效果测试</title>
+    <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+</head>
+<style>
+
+    .outer{
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        margin-top: 20px;
+    }
+    .btns{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 20px;
+    }
+    .change-btn{
+        background: #eee;
+        width: 20px;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .change-btn:hover{
+        cursor: pointer;
+    }
+    .small-font{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5px;
+        width: 40px;
+    }
+    #comment{
+        width: 398px;
+        padding: 0;
+    }
+</style>
+<body>
+    <div class="outer">
+        <div class="btns">
+            <span class="change-btn small-font" id="top" >向上</span>
+            <span class="change-btn small-font" id="bottom" >向下</span>
+            <span class="change-btn" id="add">+</span>
+            <span class="change-btn" id="reduce">-</span>
+        </div>    
+        <div>
+            <textarea name="" id="comment" cols="20" rows="8">随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度
+                    随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度随按钮变化高度
+            </textarea>
+        </div>
+    </div>
+
+    <div class="outer">
+        你爱好的运动是</br>
+        <input type="checkbox" name="items" value="足球">足球
+        <input type="checkbox" name="items" value="篮球">足球
+        <input type="checkbox" name="items" value="羽毛球">羽毛球
+        <input type="checkbox" name="items" value="乒乓球">乒乓球</br>
+        <input type="button"  id="checkAll"  value="全 选">
+        <input type="button"  id="noCheck" value="全不选">
+        <input type="button"  id="checkedRev"  value="反 选">
+        <input type="button"  id="send"  value="提交">  
+    </div>
+
+    <div class="outer">
+        <input type="checkbox" id="checkChange">全选/全不选
+        <input type="checkbox" name="changeItem" value="1">1
+        <input type="checkbox" name="changeItem" value="2">2
+        <input type="checkbox" name="changeItem" value="3">3
+    </div>
+<script >
+    $(function(){
+        var $comment = $("#comment")
+        
+        $("#add").click(function(){
+            if(!$comment.is(":animated")){
+                $comment.height($comment.animate({height: "+=40"},400) )
+            }
+        })
+        $("#reduce").click(function() {
+            if(!$comment.is("animated")){
+                $comment.height($comment.animate({height: "-=40"},400) )
+            }
+        })
+        $("#top").click(function() {
+            if(!$comment.is("animated")){
+                $comment.animate( {scrollTop : "-=50"}, 400)
+            }
+        })
+        $("#bottom").click( () => {
+            if(!$comment.is("animated")){
+                $comment.animate( {scrollTop: "+=50"}, 400)
+            }
+        })
+
+        var $items = $("input[name='items']:checkbox")
+        $("#checkAll").click(function() {
+            $items.attr('checked', true)
+        })
+        $("#noCheck").click(function() {
+            $items.attr('checked', false)
+        })
+        $("#checkedRev").click(function() {
+            $items.each(function() {
+                $(this).prop("checked",!$(this).prop("checked"))
+            })
+        })
+        $("#send").click(function() {
+            var str = "你选中的是: \r\n"
+            $items.each(function() {
+                str+= $(this).val()+"\r\n"
+            })
+            alert(str)
+        })
+        
+        
+        $("#checkChange").click(function() {
+            var $changeItems = $("input[name='changeItem']:checkbox")
+            $changeItems.prop("checked",this.checked)
+        })
+
+    })
+</script>
+</body>
+
+</html>
