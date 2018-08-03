@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <style>
+        #select1{
+            float: left;
+        }
+        .btns{
+            position: relative;
+            float: left;
+            width: 40px;
+        }
+        .btns button{
+           width: 40px;
+        }
+        #select2{
+            float: left;
+        }
+        p{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <select multiple name="" id="select1" style="width: 100px;height: 160px;">
+            <option value="1">选项1</option>
+            <option value="2">选项2</option>
+            <option value="3">选项3</option>
+        </select>
+        <div class="btns">
+            <button id="rightSingle">-&gt;</button>
+            <button id="leftSingle">&lt;-</button>
+            <button id="rightAll">&gt;&gt;</button>
+            <button id="leftAll">&lt;&lt;</button>
+        </div>
+        <select multiple name="" id="select2" style="width: 100px;height: 160px;">
+            
+        </select>
+        <p>提示：按住ctrl多选</p>
+    </div>
+<script>
+    
+    $(function() {
+        function clearCheck() {
+            var options = $("#select1 option:selected,#select2 option:selected")
+            console.log(options)
+            options.prop("selected",false)
+        }
+        /*排序方法*/
+        function sortOption(select){
+            console.log(select,"ops")
+            var newOptions = select.find("option").sort(function(a,b) {
+                console.log(a.value)
+                if(a.value > b.value){
+                    return 1
+                }
+                if(b.value > a.value){
+                    return -1
+                }
+                return 0
+            })
+            console.log(newOptions,"new")
+            select.find("option").remove()
+            select.append(newOptions)
+        }
+        $("#rightSingle").click(function() {
+            var options = $("#select1 option:selected")
+            options.appendTo($("#select2"))
+            var beforeOptions = $("option:selected").not(options)
+            beforeOptions.prop("selected",false)
+            sortOption($("#select2"))
+        })
+        $("#leftSingle").click(function() {
+            var options = $("#select2 option:selected")
+            options.appendTo($("#select1"))
+            var beforeOptions = $("option:selected").not(options)
+            beforeOptions.prop("selected",false)
+            sortOption($("#select1"))
+        })
+        $("#rightAll").click(function() {
+            var allLeft = $("#select1 option")
+            allLeft.appendTo($("#select2"))
+            clearCheck()
+        })
+        $("#leftAll").click(function() {
+            var allRight = $("#select2 option")
+            allRight.appendTo($("#select1"))
+            clearCheck()
+        })
+        $("option").dblclick(function() {
+            console.log($(this).parent().attr("id"))
+            if($(this).parent().attr("id") === 'select1'){
+                $(this).appendTo("#select2")
+            }else{
+                $(this).appendTo("#select1")
+            }
+            // var beforeOptions = $("option:selected").not($(this))
+            // beforeOptions.prop("selected",false)
+            // (function sortOption(){
+            //     function compare(a, b) {
+            //         if(a.value > b.value){
+            //             return 1
+            //         }
+            //         if(b.value > a.value){
+            //             return -1
+            //         }
+            //         return 0
+            //     }
+            //     var newOptions = $("#select1").find("option").sort(function(a,b) {
+            //         if(a.value > b.value){
+            //             return 1
+            //         }
+            //         if(b.value > a.value){
+            //             return -1
+            //         }
+            //         return 0
+            //     })
+            //     $("#select1").find("option").remove()
+            //     $("#select1").append(newOptions)
+
+            //     var newOptions2 = $("#select2").find("option").sort(function(a,b) {
+            //         console.log(a.value)
+            //         if(a.value > b.value){
+            //             return 1
+            //         }
+            //         if(b.value > a.value){
+            //             return -1
+            //         }
+            //         return 0
+            //     })
+            //     $("#select2").find("option").remove()
+            //     $("#select2").append(newOptions2)
+            // })()
+        })
+    })
+</script>
+</body>
+</html>
