@@ -1,0 +1,880 @@
+@media screen and (max-width: 768px){
+    html{
+        overflow-x: hidden;
+    }
+    .outer-container{
+        width: 7.5rem;
+        width: 100%;
+    }
+    
+    .banner {
+        height: 3.63rem;
+        min-width: 0;
+        position: relative;
+        width: 100%;
+        background: url("images/bg_banner.png") center no-repeat;
+        background-size: 100% 100%;
+    }
+    .banner-title-container{
+        width: 100%;
+        position: absolute;
+        top: 1rem;
+        text-align: center;
+    }
+    .banner-title{
+        width: 100%;
+        text-align: center;
+        height: 0.58rem;
+        line-height: 0.58rem;
+        font-size: 0.58rem;
+        font-style: italic;
+        font-weight: bold;
+        color: #fff;
+    }
+    .banner-text{
+        width: 100%;
+        position: absolute;
+        color: #fff;
+        font-size: 0.28rem;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        margin-top: 0.15rem;
+    }
+    .banner-bar {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0.7rem;
+        line-height: 0.7rem;
+        text-align: center;
+        background: rgba(34, 61, 196, 0.7);
+        color: #fff;
+        font-size: 0.14rem;
+    }
+    .bar-btns {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .bar-btns li{
+        font-size: 0.22rem;
+        width: 25%;
+        height: 100%;
+        float: left;
+        cursor: pointer;
+    }
+    .bar-btns li.checked{
+        background: #00C1DE;
+    }
+    .bar-btns li:hover{
+        background: #00C1DE;
+    }
+    .main{
+        padding-top: 0.5rem;
+        min-width: 0;
+        font-size: 0.24rem;
+        width: 100%;
+        background-color: #F0F2F6;
+        font-family: 'PingFangSC'
+    }
+    .main .title-container {
+        margin-bottom: 0.05rem;
+    }
+    .main .title-container img{
+       
+    }
+    .main-wrap{
+        width: 6.9rem;
+        margin: 0 auto;
+    }
+    .main-wrap:after{
+        display: block;
+        content: '';
+        clear: both;
+        visibility: hidden;
+
+    }
+    .main-title {
+        text-align: center;
+        margin-top: 0.1rem;
+        height: 0.36rem;
+        line-height: 0.36rem;
+        font-size: 0.28rem;
+        color: #73777A;
+    }
+    .main .main-wrap{
+        width: 100%;
+        height: 25.5rem;
+        padding-top: 0.24rem;
+        margin-top: 0.18rem;
+        background: url("images/bg_main.png") no-repeat top;
+        background-size: 100% 100%;
+    }
+    .title-name{
+        display: inline-block;
+        font-size: 0.36rem;
+        margin: 0 0.27rem;
+        line-height: 0.46rem;
+        color: #333333;
+        font-family: 'PingFangSC';
+        vertical-align: middle;
+    }
+    .title-container{
+        font-size: 0;
+        height: 0.46rem;
+        line-height: 0.46rem;
+        margin-bottom: 0.25rem;
+        text-align: center;
+    }
+    .main-container{
+        width: 100%;
+    }
+    .mc2 .content-box{
+        width: 5.89rem;
+    }
+    .mc2 .chat-btns ul,.mc3 .chat-btns ul{
+        float: left;
+    }
+    .mc2 .simple-intro:last-of-type{
+        height: 0.30rem;
+        line-height: 0.30rem;
+        margin-top: 0.09rem;
+        overflow: hidden;
+        font-size: 0.2rem;
+    }
+    .mc2 .simple-intro:nth-of-type(2){
+        height: 0.34rem;
+        overflow: hidden;
+    }
+    .chat-btns ul:after{
+        display: block;
+        content: '';
+        visibility: hidden;
+        clear: both;
+    }
+    .mc2 .chat-btn{
+        float: left;
+    }
+    .mc2 .simple-intro{
+        width: 6.00rem;
+        overflow: hidden;
+    }
+    .mc2 .chat-btns .phone, .mc3 .chat-btns .phone{
+        float:right;
+        height: 0.34rem;
+        line-height: 0.34rem;
+        margin-top: 0;
+    }
+    .mc3 .content-box{
+        width: 5.64rem;
+        padding: 0.20rem 0 0.2rem 0.36rem;
+    }
+    .mc3 .process-li{
+        width: 2.3rem;
+    }
+    .mc4 .simple-intro{
+        font-size: 0.24rem;
+        width: 5.52rem;
+        line-height: 0.32rem;
+    }
+    .mc4 .content-box{
+        width: 5.94rem;
+        height: 0.88rem;
+        padding: 0.3rem 0 0.3rem 0.2rem;
+    }
+    .mc4 .process-li{
+        margin-right: 0.2rem;
+    }
+    .mc5 .simple-intro{
+        height: 0.64rem;
+        line-height: 0.32rem;
+    }
+    .right-arrow{
+        display: inline-block;
+        width: 0.10rem;
+        height: 0.18rem;
+        margin-left: 0.06rem;
+        background: url("images/arrow_right.png") no-repeat center;
+        background-size: 100%;
+    }
+    .main-container:nth-of-type(2) .process-li-intro{
+        width: 1.68rem;
+    }
+    .main-container:nth-of-type(even) .container-box{
+        margin-left: 0.51rem;
+    }
+    .main-container > img{
+        display: none;
+    }
+    .mc1{
+        height: 4.2rem;
+        width: 100%;
+    }
+    .mc2{
+        height: 4.50rem;
+        width: 100%;
+    }
+    .mc3{
+        height: 3.8rem;
+        width: 100%;
+    }
+    .mc3 .content-box{
+    }
+    .mc4{
+        height: 4.80rem;
+        width: 100%;
+    }
+    .mc5{
+        width: 100%;
+    }
+    .title-container img{
+        display: inline-block;
+        vertical-align: middle;
+        width: 2.0rem;
+        height: 0.12rem;
+    }
+    .container-box{
+        float: left;
+        margin-left: 1.2rem;
+    }
+    .main-container{
+        width: 7rem !important;
+    }
+    .main-container > img{
+        float: right;
+    }
+    .box-title{
+        font-size: 0.32rem;
+        line-height: 0.42rem;
+        color: #373D41;
+        font-family: 'PingFangSC';
+    }
+    .simple-intro{
+        font-size: 0.24rem;
+        margin-top: 0.08rem;
+        line-height: 0.34rem;
+        color: #73777A;
+    }
+    .search{
+        height: 0.6rem;
+        margin-top: 0.30rem;
+        
+    }
+
+    .search-container{
+        float: left;
+        width: 4.10rem;
+        height: 0.60rem;
+        line-height: 0.60rem;
+        padding-left: 0.14rem;
+        border: 1px solid #00C1DE;
+    }
+    .search-btn{
+        width: 1.46rem;
+        height: 0.60rem;
+        line-height: 0.60rem;
+        font-size: 0.24rem;
+        float: right;
+        background: #00C1DE;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+    }
+    .search input{
+        width: 2.80rem;
+        height: 0.24rem;
+        line-height: 0.24rem;
+        font-size: 0.24rem;
+        display: inline-block;
+        border: none;
+        background: transparent;
+        outline: none;
+    }
+    .search input::placeholder{
+        color: #C3C5C6;
+    }
+    .search-select{
+        width: 1.07rem;
+        height: 0.60rem;
+        line-height: 0.6rem;
+        position: relative;
+        display: block;
+        float: right;
+        text-align: center;
+    }
+    .search-select .suffix{
+        display: inline-block;
+        width: 100%;
+        padding-left: 0.1rem;
+        height: 0.30rem;
+        line-height: 0.30rem;
+        text-align: left;
+        border-left: 1px solid #D7D8D9;
+        background: url("images/arrow_icon.png") no-repeat 0.75rem center;
+        background-size: 0.16rem 0.06rem;
+        color: #73777A;
+    }
+    .select-list{
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        box-shadow: 1px 1px 1px rbga(0,0,0,0.5);
+        z-index: 10;
+    }
+    .select-list li{
+        text-align: center;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        cursor: pointer;
+    }
+    .warn{
+        color: #35B34A;
+        font-size: 0.24rem;
+        line-height: 0.34rem;
+        margin-top: 0.06rem;
+    }
+    .check-list{
+        position: relative;
+        margin-top: 0.14rem;
+        font-size: 0.24rem;
+        line-height: 0.41rem;
+    }
+    .check-list li{
+        color: #73777A;
+    }
+    .check{
+        width: 0.24rem;
+        height: 0.24rem;
+        font-size: 0.24rem;
+        margin-right: 0.13rem;
+        display: inline-block;
+        border-radius: 50%;
+        background: url("images/check.png") no-repeat left center;
+        background-size: 100%;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    
+    .warn-text{
+        margin-left: 0.1rem;
+    }
+    .blue1{
+        color: #00C1DE;
+    }
+    .orange1{
+        color: orange;
+    }
+    .warn-text2{
+        color: #002515;
+    }
+    .check-btn{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.48rem;
+        height: 0.59rem;
+        line-height: 0.59rem;
+        font-size: 0.24rem;
+        background: #FF8A00;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .content-box{
+        margin-top: 0.34rem;
+        padding: 0.28rem 0 0.3rem 0.37rem;
+        border: 1px solid #00C1DE;
+    }
+    .content-box ul:after{
+        display: block;
+        content: '';
+        visibility: hidden;
+        clear: both;
+    }
+    .process-li{
+        width: 1.68rem;
+        margin-right: 0.14rem;
+        float: left;
+        font-size: 0.28rem;
+        color: #00C1DE;
+    }
+    .process-li-title{
+        width: auto;
+        white-space: nowrap;
+    }
+    .process-li{
+        width: auto;
+    }
+    .process-li:last-of-type{
+        margin-right: 0;
+    }
+    .process-li p{
+        vertical-align: middle;
+    }
+    .process-li-img{
+        display: inline-block;
+        vertical-align: middle;
+        width: 0.07rem;
+        height: 0.18rem;
+    }
+    .process-li p:first-child{
+        line-height: 0.34rem;
+    }
+    .process-li-intro{
+        display: block;
+        margin-top: 0.09rem;
+        font-size: 0.24rem;
+        color: #9B9EA0;
+        line-height: 0.3rem;
+    }
+    .mc3 .process-li-intro{
+        width: 2.3rem;
+    }
+    .mc5 .process-li-intro{
+        margin-top: 0.1rem;
+    }
+    .main .chat-btns{
+        height: 0.34rem;
+        line-height: 0.34rem;
+        width: 100%;
+        margin-top: 0.22rem;
+    }
+    .chat-btn{
+        float: left;
+        margin-right: 0.28rem;
+        height: 0.34rem;
+        line-height: 0.34rem;
+        background: url("images/wangwang.png") no-repeat left center;
+        background-size: 0.25rem 0.25rem;
+        padding-left: 0.3rem;
+        color: #00C1DE;
+    }
+    .chat-btn a{
+        font-size: 0.24rem;
+        line-height: 0.34rem;
+        cursor: pointer;
+    }
+    .phone{
+        display: block;
+        color: #BBBCBD;
+        font-size: 0.24rem;
+        line-height: 0.34rem;
+        margin-top: 0.13rem;
+    }
+    .process-intro-p{
+        display: inline;
+        line-height: 0.3rem;
+        font-size: 0.24rem;
+    }
+    .process-intro-p:after{
+        display: inline;
+        content: ',';
+    }
+    .process-intro-p:nth-of-type(2):after{
+        content: ''
+    }
+    .mc5 .process-li-intro{
+        width: 5.03rem;
+        line-height: 0.3rem;
+        font-size: 0.24rem;
+    }
+    .content-title{
+        height: 0.30rem;
+        line-height: 0.30rem;
+        color: #373D41;
+    }
+    .content-title span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .title-sign {
+        text-align: center;
+        width: 0.52rem;
+        height: 0.28rem;
+        line-height: 0.24rem;
+        border: 1px solid #00C1DE;
+        font-size: 0.2rem;
+        margin-left: 0.11rem;
+        color: #00C1DE;
+        border-radius: 0.02rem;
+        white-space: nowrap;
+    }
+    .mc5 .content-li{
+        float: left;
+        margin-bottom: 0.30rem;
+        width: 5.3rem;
+        overflow: hidden;
+    }
+    .content-li:last-child{
+        margin-bottom: 0.29rem;
+    }
+    .mc5 .content-box{
+        width: 5.64rem;
+        height: 5.20rem;
+        padding: 0.28rem 0 0 0.36rem;
+        box-sizing: border-box;
+    }
+    .mc5-intro1{
+        display: block;
+        height: 0.32rem;
+        line-height: 0.32rem;
+        overflow: hidden;
+    }
+    .mc5-intro2{
+        display: block;
+    }
+    .mc5 .simple-intro span{
+        display: block;
+        line-height: 0.32rem;
+    }
+    /*推荐服务*/
+    .recommend{
+        width: 100%;
+        padding-top: 0.5rem;
+    }
+    .recommend .title-container{
+        font-size: 0;
+        height: 0.46rem;
+        margin-bottom: 0.3rem;
+    }
+    .recommend .title-container{
+        text-align: center;
+    }
+    .recommend .title-container img{
+        width: 0.8rem;
+        height: 0.04rem;
+    }
+    .recommend-title-name{
+        font-size: 0.36rem;
+        color: #fff;
+        vertical-align: middle;
+        margin: 0 0.14rem;
+        
+    }
+    .recommend{
+        padding-top: 0.5rem;
+        padding-bottom: 0.52rem;
+        background: url("https://img.alicdn.com/tfs/TB1v0QZuf9TBuNjy0FcXXbeiFXa-1440-616.png") center top;
+        background-repeat: repeat-y;
+    }
+    .recommend-li{
+        width: 100%;
+        padding: 0.27rem 0.40rem 0 0.40rem;
+        background: #fff;
+        margin-bottom: 0.2rem;
+    }
+    .recommend-title{
+        height: 0.42rem;
+        line-height: 0.42rem;
+        font-size: 0.3rem;
+        color: #373D41;
+    }
+    .recommend-title span:nth-of-type(2){
+        margin-left: 0.3rem;
+        font-size: 0.24rem;
+    }
+    .introduce{
+        height: 0.24rem;
+        line-height: 0.24rem;
+        font-size: 0.24rem;
+        margin-top: 0.15rem;
+        color: #73777A;
+    }
+    .recommend-l1 .recommend-main{
+        width: 100%;
+        height: 3.07rem;
+        background: #D8D8D8;
+        margin: 0.36rem 0 0.2rem 0;
+    }
+    .recommend-l1,.recommend-l3{
+        padding-bottom: 0.4rem;
+    }
+    .recommend-l2{
+        padding-bottom: 0.32rem;
+    }
+    .recommend-l3 {
+        margin-bottom: 0;
+    }
+    .recommend-btn{
+        width: 100%;
+        height: 0.74rem;
+        line-height: 0.74rem;
+        text-align: center;
+        background: #00C1DE;
+        font-size: 0.24rem;
+        color: #fff;
+        border: none;
+    }
+    .btn-container{
+        text-align: center;
+    }
+
+
+    .re-chat-btns{
+        width: auto;
+        height: 0.25rem;
+        line-height: 0.25rem;
+        margin-top: 0.25rem;
+    }
+    .re-list:after {
+        display: block;
+        content: '';
+        clear: both;
+        visibility: hidden;
+    }
+    .re-chat-btns li{
+        float: left;
+        margin-right: 0.9rem;
+        color: #00C1DE;
+        height: 0.25rem;
+        line-height: 0.25rem;
+        font-size: 0.24rem;
+        padding-left: 0.30rem;
+        background: url("images/wangwang.png") no-repeat left center;
+        background-size: 0.25rem 0.25rem;
+    }
+    .re-chat-btns li:last-child{
+        margin-right: 0;
+    }
+    .chat-btns li:last-of-type{
+        margin-right: 0;
+    }
+    .chat-phone {
+        text-align: center;
+        height: 0.2rem;
+        line-height: 0.2rem;
+        font-size: 0.24rem;
+        color: #9B9EA0;
+        margin-top: 0.25rem;
+        color: #BBBCBD;
+    }
+    
+    .obj-list{
+        width: 100%;
+        background: #F5F5F6;
+        padding: 0.16rem 0.50rem 0.15rem 0.50rem;
+        margin-top: 0.31rem;
+    }
+    .obj-list:after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+    .obj-list li{
+        width: 20%;
+        float: left;
+        overflow: hidden;
+        font-size: 0.18rem;
+        color: #9B9EA0;
+        text-align: center;
+    }
+    .obj-list li img{
+        display: block;
+        width: 0.32rem;
+        height: 0.32rem;
+        margin: 0 auto;
+        margin-bottom: 0.05rem;
+    }
+    .obj-list li:nth-last-of-type(1){
+        margin-right: 0;
+    }
+    .text-list{
+        margin-top: 0.25rem;
+        color: #73777A;
+    }
+    .text-list li{
+        position: relative;
+        height: 0.32rem;
+        line-height: 0.32rem;
+        font-size: 0.24rem;
+    }
+    .text-list .point{
+        display: inline-block;
+        vertical-align: middle;
+        width: 0.08rem;
+        height: 0.08rem;
+        border-radius: 50%;
+        background: #00C1DE;
+        margin-right: 0.12rem;
+
+    }
+    
+    .price-outer{
+        margin-top: 0.3rem;
+        margin-bottom: 0.19rem;
+    }
+    .price-container{
+        display: inline-block;
+        height: 0.36rem;
+        line-height: 0.36rem;
+        margin-right: 0.14rem;
+        color: #00C1DE;
+    }
+    .price-container .price{
+        font-size: 0.36rem;
+        margin-top: -4px;
+    }
+    .price-container .rmb{
+        font-size: 0.18rem;
+    }
+    .price-container .comp{
+        font-size: 0.18rem;
+        color: #ccc;
+    }
+    .counttext{
+        font-size: 0.24rem;
+        color: #73777A;
+    }
+    .recommend-l3 .recommend-btn{
+        margin-top: 0.24rem;
+    }
+    .re-li-wrap{
+        font-size: 0;
+    }
+    /*必备知识*/
+    .knowledge{
+        width: 100%;
+        padding: 0.45rem 0 0.5rem 0;
+        background: #F0F2F6;
+    }
+    .know-li{
+        float: left;
+        margin-bottom: 0.2rem;
+        width: 100%;
+        padding: 0.32rem 0 0.31rem 0.24rem ;
+        background: #fff;
+    }
+    .know-li-title{
+        line-height: 0.3rem;
+    }
+    .know-li button {
+        float: left;
+        width: 0.3rem;
+        height: 0.3rem;
+        margin-right: 0.16rem;
+        border-radius: 50%;
+        border: none;
+    }
+    .know-title {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        font-size: 0.28rem;
+        color: #373D41;
+    }
+    .know-title-btn{
+        float: left;
+        margin-right: 0.16rem;
+        width: 0.3rem;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        background: #00C1DE;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        font-size: 0.24rem;
+        cursor: pointer;
+    }
+    .know-text{
+        color: #73777A;
+        margin-left: 0.69rem;
+        width: 5.62rem;
+        margin-top: 0.19rem;
+        font-size: 0.24rem;
+        line-height: 0.32rem;
+    }
+    .problem {
+        width: 100%;
+        height: 2.29rem;
+        padding-top: 0.45rem;
+        background: #fff;
+    }
+    .know-list {
+        overflow: hidden;
+    }
+    /*活动*/
+    .activity{
+        padding-top: 0.45rem;
+        padding-bottom: 0.5rem;
+    }
+    .activity-title{
+        line-height: 0.3rem;
+        font-size: 0.3rem;
+        color: #fff;
+        margin-bottom: 0.39rem;
+    }
+    .activity-list li {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 1.86rem;
+        padding:  0.10rem 0 0 0.5rem;
+        margin-bottom: 0.2rem;
+        background: url("images/kapian_bg.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    .activity-list li:last-child{
+        margin-right: 0;
+    }
+    .activity-btn1,.activity-btn2{
+        position: absolute;
+        right: 0.48rem;
+        bottom: 0.35rem;
+        width: 1.86rem;
+        height: 0.54rem;
+        line-height: 1;
+        border: none;
+        font-size: 0.24rem;
+        box-sizing: border-box;
+        outline: none;
+        background: #fff;
+        color: #6089F1;
+    }
+    .text-container p{
+        line-height: 0.36rem;
+        font-size: 0.24rem;
+        color: #fff;
+    }
+    .problem-list{
+        font-size: 0;
+        width: 100%;
+        margin: 0 auto;
+        color: #373D41;
+        height: 0.34rem;
+        line-height: 0.34rem;
+    }
+    .problem-list li{
+        height: 100%;
+        line-height: 0.34rem;
+        position: relative;
+        float: left;
+        margin-right: 0.68rem;
+    }
+    .problem-list li:last-child{
+        margin-right: 0;
+    }
+    .problem-list li .point{
+        display: inline-block;
+        vertical-align: middle;
+        width: 0.1rem;
+        height: 0.1rem;
+        line-height: 0.21rem;
+        border-radius: 50%;
+        margin-right: 0.1rem;
+        background: #00C1DE;
+    }
+    .problem-list li > span{
+        vertical-align: middle;
+        font-size: 0.24rem;
+    }
+    .pc-point{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .problem-list li{
+        margin-right: 0.53rem;
+    }
+}
